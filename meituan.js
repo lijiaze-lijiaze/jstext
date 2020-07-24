@@ -19,4 +19,4 @@ var obj = {
   }
 }
 
-obj.d();
+obj.b();
