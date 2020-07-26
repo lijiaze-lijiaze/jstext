@@ -1,14 +1,16 @@
 function twosum(arr,target){
     var aaa = new Map()
-    aaa.set('a',10)
+    //aaa.set('a',10)
     
      arr.forEach((x,index) => {
-         console.log(aaa.has(x))
+         let ex = target - x
+         console.log(aaa.has(ex))
          if(aaa.has(x)){
              console.log(index,aaa.get(x))
              return
          }else{
-             aaa.set(x,index)
+             aaa.set(ex,index)
+             console.log(aaa)
          }
      });
     // for(let i = 0;i<arr.length;i++){
@@ -21,4 +23,4 @@ function twosum(arr,target){
     //     }
     // }
 }
-twosum([1,2,5,3,5],3)
+twosum([1,2,5,3,7],9)
