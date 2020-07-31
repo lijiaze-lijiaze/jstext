@@ -10,7 +10,7 @@ const data = [
     { id: 86, parentId: 74 },
   ];
   const idMapping = data.reduce((acc, el, i) => {
-      console.log(el.id,i)
+    console.log(el.id,i)
     acc[el.id] = i;
     return acc;
   }, {});

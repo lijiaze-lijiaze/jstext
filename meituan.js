@@ -1,8 +1,8 @@
 var a = 1;
-
-var obj = {
-  i: 10,
-  b: () => console.log(this.i, this),
+var rr = 12;
+var obj2 = {
+  rr: 10,
+  b: () => console.log(this.rr, this),
   c: function () {
     console.log(a);
     let a = 2;
@@ -19,4 +19,5 @@ var obj = {
   }
 }
 
-obj.b();
+let tt = obj2.b;
+tt()
