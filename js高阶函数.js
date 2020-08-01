@@ -5,7 +5,7 @@ function repeat(func,times,wait){
     return function(str){
         for(let i = 0;i<times;i++){
             setTimeout(()=>{
-                function(str)
+                fn(str)
             },i*wait)
         }
     }
