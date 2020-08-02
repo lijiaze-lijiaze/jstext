@@ -54,3 +54,12 @@ const range = (cityData,id) => {
     }
     return result
 }
+
+//正则
+const regular = (cityData,id) => {
+    if(!cityData || !cityData.length) return;
+    let cityStr = JSON.stringify(cityData)
+    let reg = new RegExp(`"id":${id},"name":"([^\\x00-\\xff]+)",`)
+    return (cityStr.match(reg))[1]
+}
+let r4 = regular(cityData,2)
