@@ -22,8 +22,8 @@ var jsonp = function({url,params,cb,timeout}){
         }
         window[cbName] = function(data){
             if(!timeOutCallback){
-                cb && cb(event)
-                reject(event)
+                cb && cb(data)
+                reject(data)
             }
             commonCb()
         }
