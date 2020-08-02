@@ -13,3 +13,4 @@ function sum(...args){
     return next
 }
 sum(1)(2)
+//需要转换为字符串时，会调用toString，需要转换为数字时需要调用valueOf。
