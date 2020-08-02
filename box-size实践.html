@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+            .box {
+                width: 10px;
+                height:10px;
+                border:1px solid red;
+                margin:2px;
+                padding:2px;
+                background:blue;
+            }
+            #borderBox {
+                box-sizing: border-box;
+            }
+            #contentBox {
+                box-sizing: content-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='boederBox' class='box'></div>
+        <div id='contentBox' class='box'></div>
+    </body>
+</html>
+<!-- background会影响元素的padding区域，不影响margin区域 -->
