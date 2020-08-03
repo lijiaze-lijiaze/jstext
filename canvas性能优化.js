@@ -10,3 +10,4 @@
 
 //requestAnimationFrame 动画的帧数是由系统根据当前页面是否可见，CPU 的占用情况等等来决定的，可以最大化地利用系统性能。
 //浏览器对 requestAnimationFrame 动画进行了优化。
+//页面不可见时会自动停止
