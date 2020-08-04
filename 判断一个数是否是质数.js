@@ -9,6 +9,7 @@ function isPrime(number){
         return false
     }
     var squareRoot = Math.sqrt(number)
+    console.log(squareRoot)
     for(var i = 3; i<= squareRoot;i+=2){
         if(number%i == 0){
             return false
@@ -16,3 +17,4 @@ function isPrime(number){
     }
     return true
 }
+isPrime(13)
