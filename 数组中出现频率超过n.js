@@ -1,4 +1,4 @@
-Array.prototype.findDuplicate = fucntion(n){
+Array.prototype.findDuplicate = function(n){
     var result = [];
     if(typeof n !=='number'||isNaN(n)){return result}
     var itemFreges = {}
