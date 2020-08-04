@@ -8,3 +8,7 @@ var isAllInView = function(elem){
 
     )
 }
+
+//offsetWidth/offsetHeight返回值包括content+padding+border
+//clientWidth/clientHeight包括content +padding
+//scrollWidth/scrollHeight包括content + padding+溢出内容
