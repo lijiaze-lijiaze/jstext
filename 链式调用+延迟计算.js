@@ -10,6 +10,7 @@ function sum(...args){
     next.toString = ()=>{
         return args.reduce((r,c) => r+c,0)
     }
+    console.log(next)
     return next
 }
 sum(1)(2)
