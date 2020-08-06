@@ -1,0 +1,11 @@
+.text-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.multi-text-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box
+}
