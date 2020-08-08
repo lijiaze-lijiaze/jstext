@@ -1,5 +1,5 @@
 var isAllInView = function(elem){
-    var rect = elem.getBoundingClientReact()
+    var rect = elem.getBoundingClientReact()//获得元素相对与游览器视窗
     return(
         rect.top >=0 &&
         rect.left >=0 &&

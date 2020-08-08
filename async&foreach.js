@@ -1,18 +1,18 @@
-const list = [1,2,3]
+const list = [1, 2, 3]
 const square = num => {
-    return new Promise((resolve,reject)=>{
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(num*num)
+            resolve(num * num)
         }, 1000);
     })
 }
 //一秒后输出1，4，9
- function test(){
-     list.forEach(async x => {
-         const res = await square(x)
-         console.log(res)
-     })
- }
+function test() {
+    list.forEach(async x => {
+        const res = await square(x)
+        console.log(res)
+    })
+}
 //每隔一秒后输出1，4，9
 // async function test(){
 //     for(let x of list){
