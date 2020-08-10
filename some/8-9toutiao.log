@@ -96,7 +96,7 @@ console.log(search(arr,3))
 search(arr,3)
 
 
-//1byte = ? bit
+//1byte = ? bit//8
 
 //快速排序的O值是多少
 //sort和快速排序的区别
