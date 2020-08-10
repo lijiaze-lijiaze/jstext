@@ -1,0 +1,104 @@
+//第一轮
+//解读css
+.links {
+    margin-bottom: 8px;
+    a {
+      color: '#ccc';
+      &:not(:last-child) {
+        margin-right: 40px
+      }
+    }
+  }
+  
+   @media screen and (max-width: 300px) {
+     .block {
+       background-color: red;
+     }
+   }
+  
+  //代码输出什么，for循环的执行顺序，先判断后赋值？
+  for (var i = 0; i < 10; i++) {
+    setTimeout(function() {
+      console.log(i);
+    }, 0);
+  }
+  //读代码的问题
+  console.log(1);
+  setTimeout(() => {
+    console.log(2);
+    Promise.resolve().then(() => {
+      console.log(3);
+    });
+  });
+  new Promise((resolve, reject) => {
+    console.log(4);
+    resolve(5);
+  }).then(data => {
+    console.log(data);
+  });
+  setTimeout(() => {
+    console.log(6);
+  });
+  console.log(7);
+  
+
+  //clickme 3 次，show alert 1 次 clickme 2 次回答输出结果
+  function Counter() {
+    const [count, setCount] = useState(0);
+  
+    function handleAlertClick() {
+      setTimeout(() => {
+        alert('You clicked on: ' + count);
+      }, 3000);
+    }
+  
+    return (
+      <div>
+        <p>You clicked {count} times</p>
+        <button onClick={() => setCount(count + 1)}>
+          Click me
+        </button>
+        <button onClick={handleAlertClick}>
+          Show alert
+        </button>
+      </div>
+    );
+  }
+
+  //链接视频直播的方式，websocket直接推流和发送至后台服务器统一处理，flv的原理也是先接受flash的信号，通过内部机制去转换成非flash的信号
+  //react hooks的储存原理，和闭包的关系
+  //hooks是如何提升效率的
+  //css的伪类有哪些，如何选择前五个元素，如何选择后五个元素
+  //websocket的底层通讯方式，
+
+
+  //第二轮
+  //写一个二分查找
+  function search(arr,key){
+    var low = 0;
+    var high = arr.length - 1;
+    while(low<=high){
+        let middle = parseInt((high+low)/2)
+        if(key === arr[middle]){
+            return middle
+            
+            }else if(key > arr[middle]){
+                low = middle + 1
+            }else if(key < arr[middle]){
+                high = middle - 1
+            }else {
+                return -1
+            }
+    }
+}
+var arr = [1,2,3,4,5]
+console.log(search(arr,3))
+search(arr,3)
+
+
+//1byte = ? bit
+
+//快速排序的O值是多少
+//sort和快速排序的区别
+//视频链接过程中websocket做了什么
+//如果在直播视频播放中遇到视频卡顿，如何定位问题出在哪里
