@@ -6,7 +6,6 @@ function aaa(str){
             while(setarr.has(str[i])){
                setarr.delete(str[j])
                 j++
-                
             }
             setarr.add(str[i])
             

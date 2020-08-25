@@ -1,0 +1,32 @@
+1.实现一个hooks
+function useInterval(callback, delay) {
+
+}
+
+function App () {
+  const [counter, setCounter] = useState(0);
+  useInterval(() => {
+    setCounter(counter + 1);
+  },  delay);
+  
+  return <div>counter</div>
+}
+2.css选择器优先级运算
+
+<div class="a b"></div>
+.b {
+  background: black;
+}
+.a {
+  background: red;
+}
+3.关于BFC了解什么
+Bfc:块格式上下文
+
+1/position中使用top：10px,是以内部元素的哪部份计算边界？
+
+2/页面结构包括页头、主体内容、页脚，页脚永远在页面底部（不是窗口底部），即内容高度不够时，页脚也要保证在页面底部。
+  .content{min-height:calc(100vh - 200px)}
+3/宽度未知，正方形
+  高度使用padding加百分比
+4/top: transform: translate margin的百分比数值是以什么为基准值
