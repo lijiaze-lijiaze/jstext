@@ -30,3 +30,40 @@ Bfc:块格式上下文
 3/宽度未知，正方形
   高度使用padding加百分比
 4/top: transform: translate margin的百分比数值是以什么为基准值
+
+4.写代码[1,[2,[3,[4]]]] -> [4,[3,[2,[1]]]]
+  function change(arr){
+    let result = []
+    //数组解构
+    var each = function(arr){
+        arr.forEach(element=>{
+            //是数组
+            if(element instanceof Array){
+                each(element)
+            }else{
+                result.push(element)
+            }
+            //不是数组
+        })
+    }
+    each(arr)
+    console.log(result)
+    //[1,2,3,4]
+    //取出第一位
+   
+    let newarr = []
+    result.forEach((x,index)=>{
+        if(index == 0 ){
+            newarr = [x]
+            //console.log(newarr)
+        }else{
+            newarr = [x,[...newarr]]
+        }
+    })
+    
+    console.log(JSON.stringify(newarr) )
+    //arr = [item]//第一次
+    //arr = [item,arr]
+    return JSON.stringify(newarr)
+}
+change([1,[2,[3,[4]]]])
