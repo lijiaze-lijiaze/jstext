@@ -7,7 +7,7 @@ function parse(url) {
 
     const hostReg = /[^http|\/][0-9a-zA-Z][^\:|\/]+/;
     const hostMatchs = url.match(hostReg);
-    console.log(hostMatchs)
+    console.log('hostMatchs',hostMatchs)
     result.host = hostMatchs && hostMatchs[0] || '';
 
     const indexOfHash = url.indexOf('#');

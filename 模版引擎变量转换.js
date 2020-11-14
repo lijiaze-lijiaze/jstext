@@ -1,8 +1,9 @@
 function render(tem){
     const re = /\$\{(.*?)\}/g
     const res = tem.replace(re,c => {
-        const st = /\$\{(.+?)\}/.exec(c)[1]
-        console.log(/\$\{(.+?)\}/.exec(c))
+        const st = re.exec(c)[1]
+        const st1 = re.exec(c)
+        console.log(st1)
         return eval(st)
     })
     return res
